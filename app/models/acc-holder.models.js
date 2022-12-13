@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const AcctSchema = new mongoose.Schema({
+const UserSchema = new mongoose.Schema({
     fullname: {
         type: String,
         required: true
@@ -24,4 +24,4 @@ const AcctSchema = new mongoose.Schema({
     timestamps: true
 })
 
-module.exports = mongoose.model('Account', AcctSchema)
+module.exports = mongoose.model('User', UserSchema)
