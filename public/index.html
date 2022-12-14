@@ -11,27 +11,55 @@
   <div style="text-align: center;">
     <h1>GTBank Tech Academy 8</h1><hr>
   <h2>Node.js/Express.js Assignment</h2>
-  <h3>Basic Account Holder Information API</h3>
+  <h3>Basic Account Holder Information Express API</h3>
   <p><B>By:</B> Oluwatobiloba Oshodi & Lukman Gbadawiyu</p>
   </div>
-  
+
   <div style="margin: auto; width: 60%;">
     <h3>DESCRIPTION</h3>
-    <p>This API allows a caller to retrieve, submit, update or delete information on various account holders.</p>
-    <p><b>Routes URLs:</b></p>
-    <ul>
-        <p>To get all accounts: /accounts, For example; 
-            <a href="https://tobiloba-lukman.onrender.com/accounts">https://tobiloba-lukman.onrender.com/accounts</a> </p>
-        
-        <p>To get specific account: /account/id, For example; 
-            <a href="https://tobiloba-lukman.onrender.com/account/639864db6a6ba62f3d117767">https://tobiloba-lukman.onrender.com/account/639864db6a6ba62f3d117767</a> </p>
-        
-            
+    <p>This API allows a caller to retrieve, submit, update or delete information on Account Holders.</p>
 
-    </ul>
-    
+    <h3>READ</h3>
+    <p>To access the JSON databese, <a href="https://tobiloba-lukman.onrender.com/acounts" target="_blank"_blank">click here</a> 
+    or send a GET request to the <B>/accounts</B> endpoint of the API using Postman. To read the information on all account holders.
+    <p> Likewise, to access a specific account holders, send a GET request to the <b>/account/id</b> endpoint of the API using Postman, 
+      where <B>id</B> is the <B>id number</B> of the account holder.</p>
+    <h3>CREATE</h3>
+    <p>To add the information of a new account holder to the JSON database, send a POST request to the <B>/signup</B> endpoint of the API using Postman. 
+        The POST request must a body in a JSON format as follows:</p>
+    <pre style="margin: auto; background-color: #eee; border: 1px solid rgb(7, 52, 71); width: 400px; padding: 3px;">
+    <code>
+      {
+        "fullname": "full-name-of-account-holder",
+        "email": "email-of-account-holder",
+        "gender": "gender-of-account-holder",
+        "address": "address-of-account-holder",
+        "account_type": "type-of-account"
+      }
+    </code>
+    </pre>
 
-   
+    <h3>UPDATE</h3>
+    <p>To update the information of an existing account holder in the JSON database, send a PUT request to the <B>/account/id</B> endpoint of the API using Postman,
+       where <B>id</B> is the <B>id number</B> of the specific account holder, provided the information of the trainee exists in the JSON database. 
+       The body of the PUT request must be in a JSON format as follows:</p>
+    <pre style="margin: auto; background-color: #eee; border: 1px solid rgb(7, 52, 71); width: 400px; padding: 3px;">
+    <code>
+      {
+        "fullname": "full-name-of-account-holder",
+        "email": "email-of-account-holder",
+        "gender": "gender-of-account-holder",
+        "address": "address-of-account-holder",
+        "account_type": "type-of-account"
+      }
+    </code>
+    </pre>
+
+    <h3>DELETE</h3>
+    <p>To delete the information of an account holder from the JSON database, send a DELETE request to the <B>/account/id</B> endpoint of the API using Postman,
+       where <B>id</B> is the <B>id number</B> of the account holder, provided the information of the account holder exists in the JSON database.</p>
   </div>
+</body>
+</html>
 </body>
 </html>
